@@ -1,5 +1,6 @@
 import 'package:chat_app/helpers/mostrar_alerta.dart';
 import 'package:chat_app/services/auth_service.dart';
+import 'package:chat_app/services/google_signin_service.dart';
 import 'package:chat_app/services/socket_service.dart';
 import 'package:chat_app/widgets/boton_azul.dart';
 import 'package:chat_app/widgets/custom_input.dart';
@@ -28,6 +29,14 @@ class LoginPage extends StatelessWidget {
                     label1: '¿No tienes cuenta?',
                     label2: 'Crea una ahora!',
                   ),
+                  FlatButton(
+                      onPressed: () {
+                        GoogleSigninService.signinWithGoogle();
+                        if (GoogleSigninService.signinWithGoogle() != null) {
+                          Navigator.pushNamed(context, 'usuarios');
+                        }
+                      },
+                      child: Text('Ingresar con Google')),
                   Text(
                     'Términos y condiciones de uso',
                     style: TextStyle(fontWeight: FontWeight.w200),
@@ -82,7 +91,6 @@ class __FormState extends State<_Form> {
                         emailCtrl.text.trim(), passCtrl.text.trim());
 
                     if (loginOk) {
-                      
                       socketService.connect();
                       Navigator.pushReplacementNamed(context, 'usuarios');
                     } else {

@@ -1,8 +1,10 @@
 import 'package:chat_app/services/auth_service.dart';
 import 'package:chat_app/services/chat_service.dart';
+//import 'package:chat_app/services/google_signin_service.dart';
 import 'package:chat_app/services/socket_service.dart';
 import 'package:chat_app/services/usuario_service.dart';
 import 'package:flutter/material.dart';
+//import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -37,7 +39,7 @@ class _UsuariosPageState extends State<UsuariosPage> {
         appBar: AppBar(
           title: Align(
             child: Text(
-              usuario.nombre,
+              'nombre',
               style: TextStyle(
                 color: Colors.black87,
                 fontSize: 24,
@@ -104,8 +106,8 @@ class _UsuariosPageState extends State<UsuariosPage> {
         ),
         Flexible(
           child: ListTile(
-            title: Text(usuario.nombre),
-            subtitle: Text(usuario.email),
+            title: Text('nombre'),
+            subtitle: Text('email'),
             trailing: Container(
               width: 20,
               height: 20,

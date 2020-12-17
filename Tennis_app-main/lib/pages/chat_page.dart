@@ -182,8 +182,7 @@ class _ChatPageState extends State<ChatPage> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    // TODO: off del socket
-
+    
     for (ChatMessage message in _messages) {
       message.animationController.dispose();
     }

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "389259681753",
+    "firebase_url": "https://tennis-app-36039.firebaseio.com",
+    "project_id": "tennis-app-36039",
+    "storage_bucket": "tennis-app-36039.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389259681753:android:f28896ffbe08a6302503c8",
+        "android_client_info": {
+          "package_name": "com.doktor_23.Tennis_chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389259681753-ahfsdr51nr77m4bncjkm904opnsq6q0u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doktor_23.Tennis_chat_app",
+            "certificate_hash": "eaf5785a59f33a1dbfac01f2a8b5ef76f1f7eb3d"
+          }
+        },
+        {
+          "client_id": "389259681753-4s7ktkeimlva7dqohlp35p0c9ipm4aeo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfQCa0BQZ2PBDslad1TjOPkmqOpbHbMps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389259681753-4s7ktkeimlva7dqohlp35p0c9ipm4aeo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,10 +1,10 @@
+import 'package:chat_app/models/google_user.dart';
 import 'package:chat_app/services/auth_service.dart';
 import 'package:chat_app/services/chat_service.dart';
-//import 'package:chat_app/services/google_signin_service.dart';
+import 'package:chat_app/services/google_signin_service.dart';
 import 'package:chat_app/services/socket_service.dart';
 import 'package:chat_app/services/usuario_service.dart';
 import 'package:flutter/material.dart';
-//import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -20,6 +20,7 @@ class _UsuariosPageState extends State<UsuariosPage> {
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
   final usuarioService = new UsuariosService();
+  final usuarioGoog = new GoogleUser();
 
   List<Usuario> usuarios = [];
 
@@ -39,7 +40,7 @@ class _UsuariosPageState extends State<UsuariosPage> {
         appBar: AppBar(
           title: Align(
             child: Text(
-              'nombre',
+              'usuarioGoog.displayName',
               style: TextStyle(
                 color: Colors.black87,
                 fontSize: 24,
@@ -54,9 +55,10 @@ class _UsuariosPageState extends State<UsuariosPage> {
               color: Colors.black87,
             ),
             onPressed: () {
-              socketService.disconnect();
+              GoogleSigninService.signOut();
+              //socketService.disconnect();
               Navigator.pushReplacementNamed(context, 'login');
-              AuthService.deleteToken();
+              //AuthService.deleteToken();
             },
           ),
           actions: <Widget>[
